@@ -107,3 +107,5 @@ I don't have any use for the Erle Robot specific blocks so I removed those.
 Now I can publish an `Empty` to `/empty`.
 It would be nice to have a topic parameter to pass to it.
 Next put changes in own forked copies of blockly and ros_blockly.
+
+DONE: (lucasw version of ros_blockly)[https://github.com/lucasw/ros_blockly]
