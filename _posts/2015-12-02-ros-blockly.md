@@ -3,7 +3,7 @@ layout: post
 title: ROS Blockly
 ---
 
-Following the install instructions from http://wiki.ros.org/blockly.
+Following the install instructions from [ros blockly](http://wiki.ros.org/blockly).
 It is weird to clone inside of other directories, I guess it is enforcing relative paths.
 
 It looks like Erle has forked blockly, why is that?
@@ -16,7 +16,7 @@ Instead make a symlink to frontend:
 
     /var/www$ sudo ln -s /home/lucasw/ros_catkin_ws/src/ros_blockly/frontend/ ros_blockly
 
-Then can go to http://localhost/ros_blockly/pages/blockly.html
+Then can go to [localhost blockly](http://localhost/ros_blockly/pages/blockly.html)
 
 Next get the backend:
 
@@ -42,7 +42,7 @@ repo is called ros_blockly but package name is actually blockly.
     NameError: name 'BlocklyServerProtocol' is not defined
 
 Typo, BLockly -> Blockly in blockly_backend.py.
-https://github.com/erlerobot/ros_blockly/pull/12
+[erle ros blockly](https://github.com/erlerobot/ros_blockly/pull/12)
 
 Now look at webpage again, refresh it.
 
