@@ -41,7 +41,8 @@ repo is called ros_blockly but package name is actually blockly.
         factory.protocol = BlocklyServerProtocol
     NameError: name 'BlocklyServerProtocol' is not defined
 
-Typo, BLockly -> Blockly in blockly_backend.py
+Typo, BLockly -> Blockly in blockly_backend.py.
+https://github.com/erlerobot/ros_blockly/pull/12
 
 Now look at webpage again, refresh it.
 
@@ -57,94 +58,94 @@ Then press launch.
 
 On backend console:
 
-  Text message received: for count in range(10):
-    import sys
-    import time
-    from crab_msgs.msg import *
-    from sensor_msgs.msg import Joy
-
-    walking_time=2
-
-    ################
-    ## INITIALIZE ##
-    ################
-    pub = rospy.Publisher('/joy', Joy, queue_size=10)
-    msg = Joy()
-    msg.header.stamp = rospy.Time.now()
-    rate = rospy.Rate(10)
-
-    valueAxe = 0.0
-    valueButton = 0
-    for i in range (0, 20):
-      msg.axes.append(valueAxe)
-    for e in range (0, 17):
-      msg.buttons.append(valueButton)
-
-
-    #################
-    ## FORWARD  ##
-    #################
-    start = time.time()
-    msg.axes[1] =  1
-    bo=True
-    while not rospy.is_shutdown() and bo:
-      sample_time = time.time()
-      if ((sample_time - start) > walking_time):
-        bo=False
-        msg.axes[1] = 0
-      pub.publish(msg)
-      rate.sleep()
-
-  building the ros node...
-  The file generated contains...
-  #!/usr/bin/env python3
-  import rospy
-  from std_msgs.msg import String
-
-  rospy.init_node('blockly_node', anonymous=True)
-  for count in range(10):
-    import sys
-    import time
-    from crab_msgs.msg import *
-    from sensor_msgs.msg import Joy
-
-    walking_time=2
-
-    ################
-    ## INITIALIZE ##
-    ################
-    pub = rospy.Publisher('/joy', Joy, queue_size=10)
-    msg = Joy()
-    msg.header.stamp = rospy.Time.now()
-    rate = rospy.Rate(10)
-
-    valueAxe = 0.0
-    valueButton = 0
-    for i in range (0, 20):
-      msg.axes.append(valueAxe)
-    for e in range (0, 17):
-      msg.buttons.append(valueButton)
-
-
-    #################
-    ## FORWARD  ##
-    #################
-    start = time.time()
-    msg.axes[1] =  1
-    bo=True
-    while not rospy.is_shutdown() and bo:
-      sample_time = time.time()
-      if ((sample_time - start) > walking_time):
-        bo=False
-        msg.axes[1] = 0
-      pub.publish(msg)
-      rate.sleep()
-
-
-  Traceback (most recent call last):
-    File "test.py", line 9, in <module>
+    Text message received: for count in range(10):
+      import sys
+      import time
       from crab_msgs.msg import *
-  ImportError: No module named 'crab_msgs'
+      from sensor_msgs.msg import Joy
+
+      walking_time=2
+
+      ################
+      ## INITIALIZE ##
+      ################
+      pub = rospy.Publisher('/joy', Joy, queue_size=10)
+      msg = Joy()
+      msg.header.stamp = rospy.Time.now()
+      rate = rospy.Rate(10)
+
+      valueAxe = 0.0
+      valueButton = 0
+      for i in range (0, 20):
+        msg.axes.append(valueAxe)
+      for e in range (0, 17):
+        msg.buttons.append(valueButton)
+
+
+      #################
+      ## FORWARD  ##
+      #################
+      start = time.time()
+      msg.axes[1] =  1
+      bo=True
+      while not rospy.is_shutdown() and bo:
+        sample_time = time.time()
+        if ((sample_time - start) > walking_time):
+          bo=False
+          msg.axes[1] = 0
+        pub.publish(msg)
+        rate.sleep()
+
+    building the ros node...
+    The file generated contains...
+    #!/usr/bin/env python3
+    import rospy
+    from std_msgs.msg import String
+
+    rospy.init_node('blockly_node', anonymous=True)
+    for count in range(10):
+      import sys
+      import time
+      from crab_msgs.msg import *
+      from sensor_msgs.msg import Joy
+
+      walking_time=2
+
+      ################
+      ## INITIALIZE ##
+      ################
+      pub = rospy.Publisher('/joy', Joy, queue_size=10)
+      msg = Joy()
+      msg.header.stamp = rospy.Time.now()
+      rate = rospy.Rate(10)
+
+      valueAxe = 0.0
+      valueButton = 0
+      for i in range (0, 20):
+        msg.axes.append(valueAxe)
+      for e in range (0, 17):
+        msg.buttons.append(valueButton)
+
+
+      #################
+      ## FORWARD  ##
+      #################
+      start = time.time()
+      msg.axes[1] =  1
+      bo=True
+      while not rospy.is_shutdown() and bo:
+        sample_time = time.time()
+        if ((sample_time - start) > walking_time):
+          bo=False
+          msg.axes[1] = 0
+        pub.publish(msg)
+        rate.sleep()
+
+
+    Traceback (most recent call last):
+      File "test.py", line 9, in <module>
+        from crab_msgs.msg import *
+    ImportError: No module named 'crab_msgs'
 
 
 But I didn't see anything from a `rostopic echo /blockly`.
