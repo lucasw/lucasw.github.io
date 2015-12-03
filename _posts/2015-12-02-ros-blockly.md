@@ -27,9 +27,9 @@ It implements websocket, 'WebSocket allows bidirectional real-time messaging on 
 
 I'm guessing this helps connect blockly to ros, so they aren't using rosbridge?
 
-It's seems unnecessary to run catkin_make isolated, regular catkin_make is fine.
+It's seems unnecessary to run `catkin_make isolated`, regular `catkin_make` is fine.
 
-repo is called ros_blockly but package name is actually blockly.
+repo is called `ros_blockly` but package name is actually `blockly`.
 
     roscore
     rosrun blockly blockly_backend.py
