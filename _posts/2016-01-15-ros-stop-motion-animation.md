@@ -6,7 +6,7 @@ layout: post
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mc1xC_bGN5E" frameborder="0" allowfullscreen></iframe>
 
 The key nodes required and very useful to making an animation are mostly here within the vimjay project:
-https://github.com/lucasw/vimjay/tree/master/src/standalone
+<a href="https://github.com/lucasw/vimjay/tree/master/src/standalone">https://github.com/lucasw/vimjay/tree/master/src/standalone</a>
 
     roslaunch vimjay stop_motion.launch
 
