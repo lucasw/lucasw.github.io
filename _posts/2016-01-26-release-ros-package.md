@@ -1,5 +1,5 @@
 ---
-title: ROS Stop Motion Animation Tools
+title: Releasing screen_grab ROS package
 layout: post
 ---
 
