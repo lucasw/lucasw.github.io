@@ -30,3 +30,10 @@ Most likely this would mean generating synthetic X11 events.
 
 http://www.doctort.org/adam/nerd-notes/x11-fake-keypress-event.html
 
+libxdo and xdotool
+
+python-xdo ('Only a small part of the library is supported' - so python version is not ideal)
+
+https://github.com/ros-visualization/robhum_ui_utils/tree/master/virtual_keyboard
+
+https://github.com/lucasw/xdo_ros
