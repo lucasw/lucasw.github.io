@@ -37,3 +37,10 @@ python-xdo ('Only a small part of the library is supported' - so python version 
 https://github.com/ros-visualization/robhum_ui_utils/tree/master/virtual_keyboard
 
 https://github.com/lucasw/xdo_ros
+
+
+How to show full keyboard in ubuntu, what buttons are being pressed.
+key-mon just shows the most recent key down.
+gkb-keyboard-display -l us
+This works though is a little big, cannot be resized.
+Also does not show keypresses when out of focus, but still useful for debugging the key/up downs.
