@@ -1,4 +1,11 @@
+---
+title: ROS with bullet physics
+layout: post
+---
 
+
+
+```
 catkin_make
 ./devel/lib/bullet_server/bullet_server 
 Segmentation fault (core dumped)
@@ -14,6 +21,7 @@ In file included from /usr/include/bullet/btBulletDynamicsCommon.h:37:0,
 /usr/include/bullet/BulletDynamics/ConstraintSolver/btSequentialImpulseConstraintSolver.h:32:28: note:   because the following virtual functions are pure within ‘btSequentialImpulseConstraintSolver’:
  ATTRIBUTE_ALIGNED16(class) btSequentialImpulseConstraintSolver : public btConstraintSolver
 ...
+```
 
 Try exact copy of hello world http://www.bulletphysics.org/mediawiki-1.5.8/index.php/Hello_World
 
